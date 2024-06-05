@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(name = "KinopoiskApiClient", url = "localhost:8081/movies-api")
+@FeignClient(name = "KinopoiskApiClient", url = "${kinopoisk-parser.base-url}")
 public interface KinopoiskApiClient {
 
     @GetMapping("/{id}")
